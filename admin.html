@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Брони. Тёплое место</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23141311'/><rect x='5' y='6' width='4' height='20' rx='1' fill='%23e0662a'/><rect x='11' y='6' width='4' height='20' rx='1' fill='%23a8a289'/><rect x='17' y='6' width='4' height='20' rx='1' fill='%23d9cfc0'/><rect x='23' y='6' width='4' height='20' rx='1' fill='%23e0662a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="config.js"></script>
+<style>
+  :root{
+    --bg:#141311; --surface:#1d1b18; --surface2:#232019; --line:#2c2823;
+    --text:#ece7de; --muted:#a59c8c; --accent:#e0662a; --accent-h:#ef7838;
+    --ok:#7fa86a; --warn:#d2a24c; --bad:#c46b5a;
+    --r-card:16px; --r-input:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:"Golos Text",system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2{font-family:"Unbounded",sans-serif;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  header{border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Unbounded",sans-serif;font-weight:700;font-size:16px}
+  .brand i{width:20px;height:20px;border-radius:5px;background:linear-gradient(to right,var(--accent) 0 25%,#26221d 25% 45%,#a8a289 45% 70%,#d9cfc0 70% 85%,#8a6a48 85%)}
+  .head-right{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);min-width:0}
+  @media(max-width:420px){
+    #updated{display:none}
+    .head-right .btn-xs{padding:11px 14px}
+  }
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px;border:none;cursor:pointer;transition:transform .18s,background .2s,border-color .2s;white-space:nowrap}
+  .btn:active{transform:scale(.97)}
+  .btn-primary{background:var(--accent);color:#171310}
+  .btn-primary:hover{background:var(--accent-h)}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--muted)}
+  .btn-xs{padding:11px 16px;font-size:14px}
+
+  .login{max-width:400px;margin:14vh auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:32px}
+  .login h1{font-size:22px;margin-bottom:8px}
+  .login p{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+  input,select{background:var(--surface2);border:1px solid var(--line);border-radius:var(--r-input);padding:12px 14px;color:var(--text);font-family:inherit;font-size:16px;width:100%}
+  input:focus,select:focus{outline:none;border-color:var(--accent)}
+  .login .btn{width:100%;margin-top:14px}
+  .err{color:var(--warn);font-size:14px;margin-top:12px;display:none}
+  .err.show{display:block}
+
+  main{padding:28px 0 80px}
+  .stats{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-bottom:26px}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:18px}
+  .stat b{display:block;font-family:"Unbounded",sans-serif;font-size:26px;font-weight:700;line-height:1.1}
+  .stat span{color:var(--muted);font-size:13.5px}
+  .stat.hot b{color:var(--accent)}
+
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+  .tab{background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:9px 18px;font:inherit;font-size:14.5px;cursor:pointer;transition:border-color .2s,color .2s}
+  .tab[aria-pressed="true"]{border-color:var(--accent);color:var(--text)}
+  .toolbar .spacer{flex:1}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:20px;margin-bottom:14px}
+  .card-top{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+  .card-when{font-family:"Unbounded",sans-serif;font-size:18px;font-weight:600}
+  .tag{font-size:12.5px;font-weight:600;border-radius:999px;padding:5px 12px;letter-spacing:.02em}
+  .tag.new{background:color-mix(in srgb,var(--accent) 22%,var(--surface2));color:var(--accent)}
+  .tag.confirmed{background:color-mix(in srgb,var(--ok) 20%,var(--surface2));color:var(--ok)}
+  .tag.cancelled{background:var(--surface2);color:var(--muted)}
+  .grid{display:grid;gap:10px 22px;grid-template-columns:1fr;font-size:15px}
+  @media(min-width:620px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .grid div{display:flex;gap:8px;justify-content:space-between}
+  .grid dt{color:var(--muted)}
+  .grid dd{text-align:right}
+  .grid a{color:var(--accent);text-decoration:none}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+  .empty{color:var(--muted);text-align:center;padding:48px 0}
+
+  .blocked-form{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin-bottom:16px}
+  .blocked-form .f{flex:1;min-width:150px}
+  .blocked-form label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{display:flex;align-items:center;gap:9px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:8px 10px 8px 16px;font-size:14.5px}
+  .chip button{background:none;border:none;color:var(--muted);cursor:pointer;font-size:17px;line-height:1;padding:2px 4px;border-radius:50%}
+  .chip button:hover{color:var(--warn)}
+  h2{font-size:18px;margin:34px 0 14px}
+  .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:12px 22px;font-size:14.5px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:50}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(-4px)}
+</style>
+</head>
+<body>
+
+<div class="login" id="login">
+  <h1>Брони</h1>
+  <p>Введите пароль, чтобы посмотреть заявки на беседку.</p>
+  <input id="token" type="password" placeholder="Пароль" autocomplete="current-password">
+  <button class="btn btn-primary" id="enter" type="button">Войти</button>
+  <p class="err" id="loginErr">Пароль не подошёл. Попробуйте ещё раз.</p>
+</div>
+
+<div id="app" hidden>
+  <header>
+    <div class="wrap">
+      <span class="brand"><i></i>Брони</span>
+      <div class="head-right">
+        <span id="updated"></span>
+        <button class="btn btn-ghost btn-xs" id="refresh" type="button">Обновить</button>
+        <button class="btn btn-ghost btn-xs" id="logout" type="button">Выйти</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="stats">
+      <div class="stat hot"><b id="stNew">0</b><span>Новых заявок</span></div>
+      <div class="stat"><b id="stConfirmed">0</b><span>Подтверждено</span></div>
+      <div class="stat"><b id="stMonth">0</b><span>Броней в этом месяце</span></div>
+      <div class="stat"><b id="stMoney">0 ₽</b><span>Ожидаемая выручка</span></div>
+    </div>
+
+    <div class="toolbar">
+      <button class="tab" data-filter="new" aria-pressed="true" type="button">Новые</button>
+      <button class="tab" data-filter="confirmed" aria-pressed="false" type="button">Подтверждённые</button>
+      <button class="tab" data-filter="cancelled" aria-pressed="false" type="button">Отменённые</button>
+      <button class="tab" data-filter="all" aria-pressed="false" type="button">Все</button>
+    </div>
+
+    <div id="list"></div>
+
+    <h2>Закрыть дату для гостей</h2>
+    <div class="blocked-form">
+      <div class="f">
+        <label for="blockDate">Дата</label>
+        <input id="blockDate" type="date">
+      </div>
+      <div class="f">
+        <label for="blockReason">Причина, для себя</label>
+        <input id="blockReason" type="text" placeholder="Свой праздник, ремонт">
+      </div>
+      <button class="btn btn-primary" id="blockBtn" type="button">Закрыть дату</button>
+    </div>
+    <div class="chips" id="blockedList"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var API = (window.BESEDKA_API || "").trim() || "/api";
+  var MONTHS_OF = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+  var DOW = ["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"];
+  var STATUS_TEXT = {new:"Новая", confirmed:"Подтверждена", cancelled:"Отменена"};
+
+  var token = localStorage.getItem("bkToken") || "";
+  var data = {items:[], blocked:[]};
+  var filter = "new";
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  function toast(text){
+    var t = $("toast");
+    t.textContent = text;
+    t.className = "toast show";
+    clearTimeout(toast.timer);
+    toast.timer = setTimeout(function(){ t.className = "toast"; }, 2600);
+  }
+  function fmtDate(iso){
+    var p = iso.split("-");
+    var d = new Date(+p[0], +p[1]-1, +p[2]);
+    return d.getDate()+" "+MONTHS_OF[d.getMonth()]+", "+DOW[d.getDay()];
+  }
+  function money(n){ return (n||0).toLocaleString("ru-RU")+" ₽"; }
+
+  function post(payload){
+    return fetch(API, {method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify(Object.assign({token:token}, payload))})
+      .then(function(r){ return r.json(); });
+  }
+  function loadList(){
+    return fetch(API+"?action=list&token="+encodeURIComponent(token), {cache:"no-store"})
+      .then(function(r){ return r.json(); });
+  }
+
+  /* ---------- вход ---------- */
+  function tryLogin(value){
+    token = value;
+    return loadList().then(function(res){
+      if(!res || !res.ok) throw new Error("auth");
+      localStorage.setItem("bkToken", token);
+      $("login").hidden = true;
+      $("app").hidden = false;
+      apply(res);
+      return true;
+    });
+  }
+  $("enter").addEventListener("click", function(){
+    tryLogin($("token").value.trim()).catch(function(){ $("loginErr").className = "err show"; });
+  });
+  $("token").addEventListener("keydown", function(e){ if(e.key==="Enter") $("enter").click(); });
+  $("logout").addEventListener("click", function(){
+    localStorage.removeItem("bkToken");
+    location.reload();
+  });
+  $("refresh").addEventListener("click", function(){
+    loadList().then(apply).then(function(){ toast("Обновлено"); }).catch(function(){ toast("Не удалось обновить"); });
+  });
+
+  /* ---------- отрисовка ---------- */
+  function apply(res){
+    data.items = res.items || [];
+    data.blocked = res.blocked || [];
+    var now = new Date(), ym = now.getFullYear()+"-"+(now.getMonth()+1<10?"0":"")+(now.getMonth()+1);
+    var counts = {new:0, confirmed:0}, money_sum = 0, monthCount = 0;
+    data.items.forEach(function(b){
+      if(b.status==="new") counts.new++;
+      if(b.status==="confirmed") counts.confirmed++;
+      if(b.status!=="cancelled"){
+        money_sum += b.price||0;
+        if((b.date||"").indexOf(ym)===0) monthCount++;
+      }
+    });
+    $("stNew").textContent = counts.new;
+    $("stConfirmed").textContent = counts.confirmed;
+    $("stMonth").textContent = monthCount;
+    $("stMoney").textContent = money(money_sum);
+    var t = new Date();
+    $("updated").textContent = "обновлено в " + (t.getHours()<10?"0":"")+t.getHours()+":"+(t.getMinutes()<10?"0":"")+t.getMinutes();
+    document.title = (counts.new ? "("+counts.new+") " : "") + "Брони. Тёплое место";
+    renderList();
+    renderBlocked();
+  }
+
+  function renderList(){
+    var box = $("list");
+    box.innerHTML = "";
+    var items = data.items.filter(function(b){ return filter==="all" || b.status===filter; });
+    if(!items.length){
+      box.innerHTML = '<p class="empty">' + (filter==="new" ? "Новых заявок нет." : "Здесь пока пусто.") + '</p>';
+      return;
+    }
+    items.forEach(function(b){
+      var card = document.createElement("article");
+      card.className = "card";
+      var comment = b.comment ? '<div><dt>Пожелания</dt><dd>'+esc(b.comment)+'</dd></div>' : '';
+      card.innerHTML =
+        '<div class="card-top">'+
+          '<span class="card-when">'+esc(fmtDate(b.date))+'</span>'+
+          '<span class="tag '+esc(b.status)+'">'+esc(STATUS_TEXT[b.status]||b.status)+'</span>'+
+        '</div>'+
+        '<dl class="grid">'+
+          '<div><dt>Время</dt><dd>'+esc(b.timeFrom)+' – '+esc(b.timeTo)+', '+esc(b.hours)+' ч</dd></div>'+
+          '<div><dt>Тариф</dt><dd>'+esc(b.tariffLabel||b.tariff)+'</dd></div>'+
+          '<div><dt>Гость</dt><dd>'+esc(b.name)+'</dd></div>'+
+          '<div><dt>Телефон</dt><dd><a href="tel:'+esc(b.phone.replace(/[^\d+]/g,""))+'">'+esc(b.phone)+'</a></dd></div>'+
+          '<div><dt>Гостей</dt><dd>'+esc(b.guests)+'</dd></div>'+
+          '<div><dt>Сумма</dt><dd>'+money(b.price)+'</dd></div>'+
+          comment+
+          '<div><dt>Заявка</dt><dd>'+esc(b.id)+', '+esc(b.created)+'</dd></div>'+
+        '</dl>'+
+        '<div class="actions" data-id="'+esc(b.id)+'">'+
+          (b.status!=="confirmed" ? '<button class="btn btn-primary btn-xs" data-act="confirmed" type="button">Подтвердить</button>' : '')+
+          (b.status!=="cancelled" ? '<button class="btn btn-ghost btn-xs" data-act="cancelled" type="button">Отменить</button>' : '')+
+          (b.status!=="new" ? '<button class="btn btn-ghost btn-xs" data-act="new" type="button">Вернуть в новые</button>' : '')+
+          '<a class="btn btn-ghost btn-xs" href="https://wa.me/'+esc(b.phone.replace(/\D/g,""))+'" target="_blank" rel="noopener">WhatsApp</a>'+
+        '</div>';
+      box.appendChild(card);
+    });
+  }
+  function esc(s){
+    return String(s==null?"":s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  $("list").addEventListener("click", function(e){
+    var btn = e.target.closest("button[data-act]");
+    if(!btn) return;
+    var id = btn.closest(".actions").dataset.id;
+    btn.disabled = true;
+    post({action:"status", id:id, status:btn.dataset.act})
+      .then(function(res){
+        if(!res || !res.ok) throw new Error("fail");
+        return loadList().then(apply);
+      })
+      .then(function(){ toast("Готово"); })
+      .catch(function(){ btn.disabled = false; toast("Не получилось сохранить"); });
+  });
+
+  /* ---------- закрытые даты ---------- */
+  function renderBlocked(){
+    var box = $("blockedList");
+    box.innerHTML = "";
+    if(!data.blocked.length){
+      box.innerHTML = '<p class="empty" style="padding:16px 0">Закрытых дат нет.</p>';
+      return;
+    }
+    data.blocked.slice().sort().forEach(function(d){
+      var chip = document.createElement("span");
+      chip.className = "chip";
+      chip.innerHTML = esc(fmtDate(d)) + '<button type="button" data-date="'+esc(d)+'" aria-label="Открыть дату">&times;</button>';
+      box.appendChild(chip);
+    });
+  }
+  $("blockBtn").addEventListener("click", function(){
+    var date = $("blockDate").value;
+    if(!date){ toast("Выберите дату"); return; }
+    post({action:"block", date:date, reason:$("blockReason").value.trim()})
+      .then(function(res){
+        if(!res || !res.ok) throw new Error("fail");
+        $("blockDate").value = ""; $("blockReason").value = "";
+        return loadList().then(apply);
+      })
+      .then(function(){ toast("Дата закрыта"); })
+      .catch(function(){ toast("Не получилось закрыть дату"); });
+  });
+  $("blockedList").addEventListener("click", function(e){
+    var btn = e.target.closest("button[data-date]");
+    if(!btn) return;
+    post({action:"unblock", date:btn.dataset.date})
+      .then(function(){ return loadList().then(apply); })
+      .then(function(){ toast("Дата снова свободна"); })
+      .catch(function(){ toast("Не получилось"); });
+  });
+
+  document.querySelectorAll(".tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      filter = tab.dataset.filter;
+      document.querySelectorAll(".tab").forEach(function(t){ t.setAttribute("aria-pressed", t===tab?"true":"false"); });
+      renderList();
+    });
+  });
+
+  /* автовход, если пароль уже сохранён */
+  if(token){
+    tryLogin(token).catch(function(){ localStorage.removeItem("bkToken"); });
+  }
+  /* тихое обновление раз в минуту */
+  setInterval(function(){
+    if($("app").hidden) return;
+    loadList().then(apply).catch(function(){});
+  }, 60000);
+})();
+</script>
+
+</body>
+</html>

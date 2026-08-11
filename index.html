@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тёплое место. Авторская беседка в аренду, Анкудиновка</title>
+<meta name="description" content="Тёплая беседка ручной работы в Анкудиновке, Нижний Новгород. Мангальная зона, мягкая зона отдыха, 7 зон света. До 8 гостей, круглый год. Онлайн-бронирование за минуту.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Тёплое место. Авторская беседка в аренду">
+<meta property="og:description" content="Тёплая беседка ручной работы в Анкудиновке. Мангал, мягкая зона, свет. До 8 гостей, круглый год.">
+<meta property="og:image" content="photos/hero.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#141311">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23141311'/><rect x='5' y='6' width='4' height='20' rx='1' fill='%23e0662a'/><rect x='11' y='6' width='4' height='20' rx='1' fill='%23a8a289'/><rect x='17' y='6' width='4' height='20' rx='1' fill='%23d9cfc0'/><rect x='23' y='6' width='4' height='20' rx='1' fill='%23e0662a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="config.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Тёплое место",
+  "description":"Тёплая беседка ручной работы в аренду: мангальная зона, мягкая зона отдыха, 7 зон освещения. До 8 гостей, круглый год.",
+  "address":{"@type":"PostalAddress","addressLocality":"Нижний Новгород","addressRegion":"Нижегородская область","addressCountry":"RU","streetAddress":"Анкудиновка"},
+  "telephone":"+7 900 000-00-00",
+  "priceRange":"1000-13000 RUB",
+  "currenciesAccepted":"RUB",
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"02:00"}],
+  "amenityFeature":[
+    {"@type":"LocationFeatureSpecification","name":"Мангальная зона","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Отопление","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Парковка","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Можно с животными","value":true}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#141311; --surface:#1d1b18; --surface2:#232019; --line:#2c2823;
+    --text:#ece7de; --muted:#a59c8c;
+    --accent:#e0662a; --accent-h:#ef7838;
+    --olive:#a8a289; --bone:#d9cfc0; --wood:#8a6a48; --coal:#26221d;
+    --ok:#7fa86a; --warn:#d2a24c;
+    --r-card:16px; --r-input:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  /* Атрибут hidden должен побеждать любые display из классов ниже */
+  [hidden]{display:none !important}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"Golos Text",system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Unbounded",system-ui,sans-serif; letter-spacing:-.01em; line-height:1.15}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+  section{padding:72px 0}
+  @media(min-width:768px){section{padding:104px 0}}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  /* ---------- шапка ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb,var(--bg) 86%,transparent);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:"Unbounded",sans-serif;font-weight:700;font-size:17px;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .logo-mark{width:22px;height:22px;border-radius:5px;background:
+    linear-gradient(to right,var(--accent) 0 25%,var(--coal) 25% 45%,var(--olive) 45% 70%,var(--bone) 70% 85%,var(--wood) 85%)}
+  .nav-right{display:flex;align-items:center;gap:22px}
+  .nav-phone{text-decoration:none;color:var(--muted);font-size:15px;transition:color .25s}
+  .nav-phone:hover{color:var(--text)}
+  @media(max-width:640px){.nav-phone{display:none}}
+
+  /* ---------- кнопки ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:"Golos Text",sans-serif;font-weight:600;font-size:16px;
+    padding:14px 28px;border-radius:999px;text-decoration:none;white-space:nowrap;
+    transition:transform .2s cubic-bezier(.16,1,.3,1),background .25s,border-color .25s;
+    border:none;cursor:pointer;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn-primary{background:var(--accent);color:#171310}
+  .btn-primary:hover{background:var(--accent-h)}
+  .btn-primary:disabled{background:var(--line);color:var(--muted);cursor:not-allowed;transform:none}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--muted)}
+  .btn-sm{padding:10px 20px;font-size:15px}
+  .btn-block{width:100%}
+
+  /* ---------- hero ---------- */
+  .hero{padding:56px 0 72px}
+  @media(min-width:900px){
+    .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+    .hero{padding:72px 0 96px}
+  }
+  .hero-eyebrow{
+    display:inline-block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:20px;
+  }
+  .hero h1{font-size:clamp(28px,4vw,42px);font-weight:700;margin-bottom:22px}
+  .hero h1 span{color:var(--accent)}
+  .hero p{color:var(--muted);font-size:clamp(16px,2vw,18px);max-width:46ch;margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-visual{margin-top:44px}
+  @media(min-width:900px){.hero-visual{margin-top:0}}
+  .hero-photo{border-radius:var(--r-card);overflow:hidden;aspect-ratio:4/5;position:relative}
+  .hero-strip{height:10px;border-radius:0 0 var(--r-card) var(--r-card);margin-top:3px;background:
+    linear-gradient(to right,var(--accent) 0 14%,var(--coal) 14% 26%,var(--bone) 26% 38%,var(--olive) 38% 55%,var(--wood) 55% 66%,var(--accent) 66% 74%,var(--coal) 74% 90%,var(--olive) 90%)}
+
+  /* ---------- фото-слоты ---------- */
+  .ph{
+    width:100%;height:100%;min-height:200px;position:relative;
+    background:
+      repeating-linear-gradient(90deg,
+        color-mix(in srgb,var(--accent) 26%,var(--surface)) 0 14px, var(--surface) 14px 17px,
+        color-mix(in srgb,var(--coal) 80%,var(--surface)) 17px 30px, var(--surface) 30px 33px,
+        color-mix(in srgb,var(--olive) 30%,var(--surface)) 33px 48px, var(--surface) 48px 51px,
+        color-mix(in srgb,var(--bone) 22%,var(--surface)) 51px 64px, var(--surface) 64px 67px,
+        color-mix(in srgb,var(--wood) 34%,var(--surface)) 67px 82px, var(--surface) 82px 85px);
+  }
+  .ph::after{
+    content:attr(data-label);
+    position:absolute;inset:auto 12px 12px 12px;
+    font-size:13px;color:var(--bone);
+    background:color-mix(in srgb,var(--bg) 78%,transparent);
+    border-radius:8px;padding:6px 12px;width:max-content;max-width:calc(100% - 24px);
+  }
+  .photo-img{width:100%;height:100%;object-fit:cover;display:block}
+  .viz-badge{
+    position:absolute;top:12px;right:12px;z-index:2;
+    font-size:12px;color:var(--bone);letter-spacing:.04em;
+    background:color-mix(in srgb,var(--bg) 72%,transparent);
+    border-radius:999px;padding:5px 12px;pointer-events:none;
+  }
+
+  /* ---------- руками ---------- */
+  .craft .wrap{display:grid;gap:40px}
+  @media(min-width:900px){.craft .wrap{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}}
+  .craft h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:20px}
+  .craft p{color:var(--muted);max-width:56ch}
+  .craft p+p{margin-top:14px}
+  .craft-photo{border-radius:var(--r-card);overflow:hidden;aspect-ratio:4/3}
+  .craft b{color:var(--text);font-weight:600}
+
+  /* ---------- бенто ---------- */
+  .inside h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:14px}
+  .inside .lead{color:var(--muted);margin-bottom:40px;max-width:52ch}
+  .bento{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+  @media(min-width:900px){
+    .bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:180px}
+    .cell-big{grid-column:span 2;grid-row:span 2}
+    .cell-wide{grid-column:span 2}
+  }
+  .cell{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+    padding:22px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;
+    min-height:140px;position:relative;overflow:hidden;
+  }
+  .cell h3{font-size:17px;font-weight:600}
+  .cell p{font-size:14px;color:var(--muted);line-height:1.5}
+  .cell-photo{padding:0;min-height:260px}
+  .cell-accent{background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 28%,var(--surface)),var(--surface) 62%)}
+  .cell-mosaic{background:
+    repeating-linear-gradient(90deg,
+      color-mix(in srgb,var(--accent) 32%,var(--surface)) 0 10px, var(--surface2) 10px 12px,
+      color-mix(in srgb,var(--coal) 85%,var(--surface)) 12px 22px, var(--surface2) 22px 24px,
+      color-mix(in srgb,var(--olive) 34%,var(--surface)) 24px 35px, var(--surface2) 35px 37px,
+      color-mix(in srgb,var(--bone) 24%,var(--surface)) 37px 47px, var(--surface2) 47px 49px)}
+  .cell-mosaic h3,.cell-mosaic p{position:relative}
+  .cell-mosaic::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 8%,color-mix(in srgb,var(--bg) 55%,transparent) 55%,transparent)}
+  .cell .num{font-family:"Unbounded",sans-serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1}
+
+  /* ---------- галерея ---------- */
+  .gallery h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:36px}
+  .rail{
+    display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding-bottom:10px;scrollbar-width:thin;scrollbar-color:var(--line) transparent;
+  }
+  .rail>div{
+    flex:0 0 78%;max-width:420px;aspect-ratio:3/4;border-radius:var(--r-card);
+    overflow:hidden;scroll-snap-align:start;position:relative;
+  }
+  @media(min-width:768px){.rail>div{flex-basis:32%}}
+
+  /* ---------- тарифы ---------- */
+  .prices h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:14px}
+  .prices .lead{color:var(--muted);margin-bottom:40px}
+  .price-grid{display:grid;gap:14px}
+  @media(min-width:860px){.price-grid{grid-template-columns:repeat(3,1fr)}}
+  .price{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);
+    padding:30px 26px;display:flex;flex-direction:column;gap:8px;
+  }
+  .price.featured{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));background:linear-gradient(170deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),var(--surface) 55%)}
+  .price h3{font-size:18px;font-weight:600}
+  .price .cost{font-family:"Unbounded",sans-serif;font-size:30px;font-weight:700;margin:6px 0 2px}
+  .price .cost small{font-size:15px;font-weight:500;color:var(--muted);font-family:"Golos Text",sans-serif}
+  .price p{color:var(--muted);font-size:14.5px}
+  .price-note{margin-top:26px;color:var(--muted);font-size:14.5px;max-width:70ch}
+  .price-note b{color:var(--text);font-weight:600}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .pill{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;color:var(--muted)}
+
+  /* ---------- корпоративы ---------- */
+  .corp{padding-top:0}
+  .corp-card{
+    border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;
+    background:var(--surface);display:grid;
+  }
+  @media(min-width:900px){.corp-card{grid-template-columns:1.15fr .85fr;align-items:stretch}}
+  .corp-photo{position:relative;min-height:240px}
+  .corp-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .corp-text{padding:28px 24px}
+  @media(min-width:768px){.corp-text{padding:38px 34px}}
+  .corp-text h2{font-size:clamp(22px,3vw,32px);margin-bottom:14px}
+  .corp-text p{color:var(--muted);margin-bottom:10px;max-width:44ch}
+  .corp-text .btn{margin-top:18px}
+
+  /* ---------- шаги ---------- */
+  .how h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:40px}
+  .steps{display:grid;gap:0}
+  .step{
+    display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;
+    padding:26px 0;border-top:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:1px solid var(--line)}
+  .step-ico{
+    width:48px;height:48px;border-radius:12px;background:var(--surface2);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);
+  }
+  .step h3{font-size:18px;font-weight:600;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:15px;max-width:60ch}
+
+  /* ---------- бронирование ---------- */
+  .booking{background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--accent) 5%,var(--bg)))}
+  .booking h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:14px}
+  .booking .lead{color:var(--muted);margin-bottom:36px;max-width:52ch}
+  .bk{display:grid;gap:20px}
+  @media(min-width:960px){.bk{grid-template-columns:1.35fr .65fr;gap:28px;align-items:start}}
+  .bk-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:20px 16px;min-width:0}
+  @media(min-width:480px){.bk-panel{padding:22px}}
+  @media(min-width:768px){.bk-panel{padding:28px}}
+  .bk-step{border-top:1px solid var(--line);padding-top:24px;margin-top:24px}
+  .bk-step:first-child{border-top:none;padding-top:0;margin-top:0}
+  .bk-step h3{font-size:16px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .bk-step h3 i{
+    width:24px;height:24px;border-radius:7px;background:var(--surface2);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-style:normal;font-weight:700;flex:none;
+  }
+  .bk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .bk-month{font-weight:600;font-size:16px;text-transform:capitalize}
+  .bk-nav{
+    width:38px;height:38px;border-radius:var(--r-input);background:var(--surface2);
+    border:1px solid var(--line);color:var(--text);cursor:pointer;font-size:18px;line-height:1;
+    transition:border-color .2s,opacity .2s;
+  }
+  .bk-nav:hover:not(:disabled){border-color:var(--muted)}
+  .bk-nav:disabled{opacity:.35;cursor:not-allowed}
+  .bk-dow,.bk-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+  .bk-dow{margin-bottom:8px}
+  .bk-dow span{text-align:center;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .bk-day{
+    aspect-ratio:1;min-height:44px;border-radius:var(--r-input);border:1px solid var(--line);
+    background:var(--surface2);color:var(--text);font-size:15px;cursor:pointer;font-family:inherit;
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s,background .2s,transform .15s;
+  }
+  .bk-day:hover:not(:disabled){border-color:var(--accent);transform:translateY(-1px)}
+  .bk-day[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#171310;font-weight:600}
+  .bk-day:disabled{opacity:.3;cursor:not-allowed;background:transparent}
+  .bk-day.busy{opacity:.45;cursor:not-allowed;background:transparent;color:var(--muted);text-decoration:line-through}
+  .bk-day.empty{border:none;background:none;cursor:default}
+  .bk-day.weekend:not([aria-pressed="true"]):not(:disabled):not(.busy){color:var(--bone);border-color:color-mix(in srgb,var(--accent) 22%,var(--line))}
+  .bk-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;font-size:13.5px;color:var(--muted)}
+  .bk-legend span{display:flex;align-items:center;gap:7px}
+  .bk-legend em{width:12px;height:12px;border-radius:4px;flex:none;border:1px solid var(--line);background:var(--surface2)}
+  .bk-legend em.free{border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+  .bk-legend em.taken{background:transparent;opacity:.4}
+
+  .bk-opts{display:grid;gap:10px}
+  @media(min-width:600px){.bk-opts{grid-template-columns:1fr 1fr}}
+  .bk-opt{
+    text-align:left;padding:16px 18px;border-radius:var(--r-input);border:1px solid var(--line);
+    background:var(--surface2);color:var(--text);cursor:pointer;font-family:inherit;
+    display:flex;flex-direction:column;gap:3px;transition:border-color .2s,background .2s;
+  }
+  .bk-opt:hover{border-color:var(--muted)}
+  .bk-opt[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface2))}
+  .bk-opt b{font-size:15.5px;font-weight:600}
+  .bk-opt small{color:var(--muted);font-size:13.5px}
+  .bk-row{display:grid;gap:14px;margin-top:14px}
+  @media(min-width:600px){.bk-row{grid-template-columns:1fr 1fr}}
+  .bk-field{display:flex;flex-direction:column;gap:7px}
+  .bk-field label{font-size:14px;color:var(--muted)}
+  .bk-field input,.bk-field select,.bk-field textarea{
+    background:var(--surface2);border:1px solid var(--line);border-radius:var(--r-input);
+    padding:13px 15px;color:var(--text);font-family:inherit;font-size:16px;width:100%;
+    transition:border-color .2s;
+  }
+  .bk-field input::placeholder,.bk-field textarea::placeholder{color:#7d7466}
+  .bk-field input:focus,.bk-field select:focus,.bk-field textarea:focus{outline:none;border-color:var(--accent)}
+  .bk-field textarea{resize:vertical;min-height:84px}
+  .bk-field .err{font-size:13.5px;color:var(--warn);display:none}
+  .bk-field.invalid input{border-color:var(--warn)}
+  .bk-field.invalid .err{display:block}
+  .bk-wide{grid-column:1/-1}
+
+  .bk-summary{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:22px 18px;min-width:0;
+  }
+  @media(min-width:480px){.bk-summary{padding:24px}}
+  @media(min-width:960px){.bk-summary{position:sticky;top:88px}}
+  .bk-summary h3{font-size:16px;font-weight:600;margin-bottom:18px}
+  .bk-lines{display:flex;flex-direction:column;gap:11px;font-size:15px}
+  .bk-lines div{display:flex;justify-content:space-between;gap:14px}
+  .bk-lines dt{color:var(--muted)}
+  .bk-lines dd{text-align:right;font-weight:500}
+  .bk-total{
+    border-top:1px solid var(--line);margin-top:18px;padding-top:18px;
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  }
+  .bk-total span{color:var(--muted);font-size:15px}
+  .bk-total b{font-family:"Unbounded",sans-serif;font-size:26px;font-weight:700}
+  .bk-hint{color:var(--muted);font-size:13.5px;margin-top:14px}
+  .bk-summary .btn{margin-top:18px}
+  .bk-alt{text-align:center;margin-top:14px;font-size:14px;color:var(--muted)}
+  .bk-alt a{color:var(--accent);text-decoration:none}
+  .bk-alt a:hover{text-decoration:underline}
+
+  .bk-msg{
+    border-radius:var(--r-input);padding:14px 16px;font-size:14.5px;margin-top:16px;display:none;
+    border:1px solid var(--line);background:var(--surface2);
+  }
+  .bk-msg.show{display:block}
+  .bk-msg.error{border-color:var(--warn);color:var(--warn)}
+
+  .bk-done{display:none;text-align:center;padding:14px 0}
+  .bk-done.show{display:block}
+  .bk-done .tick{
+    width:56px;height:56px;border-radius:50%;margin:0 auto 18px;
+    background:color-mix(in srgb,var(--ok) 22%,var(--surface2));color:var(--ok);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .bk-done h3{font-size:20px;margin-bottom:12px}
+  .bk-done p{color:var(--muted);max-width:44ch;margin:0 auto 10px}
+  .bk-done .code{
+    display:inline-block;margin-top:8px;font-family:"Unbounded",sans-serif;font-weight:600;
+    background:var(--surface2);border:1px solid var(--line);border-radius:var(--r-input);padding:10px 18px;
+  }
+  .bk-skeleton{height:290px;border-radius:var(--r-input);background:
+    linear-gradient(100deg,var(--surface2) 30%,color-mix(in srgb,var(--bone) 8%,var(--surface2)) 50%,var(--surface2) 70%);
+    background-size:220% 100%;}
+  @media(prefers-reduced-motion:no-preference){
+    .bk-skeleton{animation:sk 1.4s linear infinite}
+    @keyframes sk{from{background-position:100% 0}to{background-position:-120% 0}}
+  }
+
+  /* ---------- локация ---------- */
+  .loc .wrap{display:grid;gap:36px}
+  @media(min-width:900px){.loc .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:64px}}
+  .loc h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:18px}
+  .loc p{color:var(--muted);max-width:52ch}
+  .loc p+p{margin-top:12px}
+  .loc b{color:var(--text);font-weight:600}
+  .loc-map{border-radius:var(--r-card);overflow:hidden;aspect-ratio:16/11;border:1px solid var(--line)}
+  .loc .btn{margin-top:24px}
+
+  /* ---------- FAQ ---------- */
+  .faq h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:36px}
+  .faq details{border-top:1px solid var(--line)}
+  .faq details:last-of-type{border-bottom:1px solid var(--line)}
+  .faq summary{
+    cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:20px 4px;font-weight:600;font-size:16.5px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:"Unbounded",sans-serif;color:var(--accent);font-size:20px;transition:transform .25s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{padding:0 4px 22px;color:var(--muted);max-width:70ch}
+
+  /* ---------- финал ---------- */
+  .final{text-align:center;background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--accent) 9%,var(--bg)))}
+  .final h2{font-size:clamp(26px,4vw,42px);margin-bottom:16px}
+  .final p{color:var(--muted);margin-bottom:32px}
+  .final-strip{max-width:340px;height:8px;margin:40px auto 0;border-radius:4px;background:
+    linear-gradient(to right,var(--accent) 0 18%,var(--coal) 18% 32%,var(--bone) 32% 44%,var(--olive) 44% 62%,var(--wood) 62% 74%,var(--accent) 74% 82%,var(--coal) 82%)}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 110px;color:var(--muted);font-size:14px}
+  @media(min-width:768px){footer{padding-bottom:34px}}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+  footer a{color:var(--muted)}
+
+  /* ---------- липкая бронь ---------- */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);
+    border-top:1px solid var(--line);display:flex;gap:10px;
+  }
+  .sticky-cta .btn{flex:1}
+  @media(min-width:768px){.sticky-cta{display:none}}
+
+  @media(prefers-reduced-motion:no-preference){
+    html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+    html.js .rv.on{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#"><span class="logo-mark"></span>Тёплое место</a>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:+79000000000">+7 900 000-00-00</a>
+      <a class="btn btn-primary btn-sm" href="#booking">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="hero-eyebrow">Открытие в ноябре. Анкудиновка</span>
+        <h1>Шашлык в тепле, <span>снег снаружи</span></h1>
+        <p>Тёплая беседка ручной работы: мангальная зона, мягкая зона отдыха, свет и музыка. Компании до 8 гостей, круглый год.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#booking">Выбрать дату</a>
+          <a class="btn btn-ghost" href="#prices">Цены</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <span class="viz-badge">Визуализация</span>
+          <img class="photo-img" src="photos/winter-hero.jpg" alt="Беседка зимним вечером: снег на крыше, тёплый свет изнутри падает на снег, подсвеченная стена-мозаика, гости на диванах и дым от мангала" fetchpriority="high">
+        </div>
+        <div class="hero-strip" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="craft">
+    <div class="wrap">
+      <div class="craft-photo rv" style="position:relative">
+        <span class="viz-badge">Визуализация</span>
+        <img class="photo-img" src="photos/wall.jpg" alt="Стена-мозаика из брусков разного цвета, подвесные лампы, мангальная зона за перегородкой" loading="lazy">
+      </div>
+      <div class="rv">
+        <h2>Сделана руками, а не по шаблону</h2>
+        <p>Эту беседку построил столяр, для которого она стала главным проектом. Стену собрал вручную из сотен брусков, каждый со своим цветом и фактурой. Такой стены нет больше нигде.</p>
+        <p>Пол нарезан на ЧПУ и подогнан без щелей. <b>Натуральное дерево и точная обработка</b>: тепло живого материала с аккуратностью, которую видно в каждом стыке.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inside">
+    <div class="wrap">
+      <h2 class="rv">Всё для вечера уже внутри</h2>
+      <p class="lead rv">Приезжаете налегке: мангал, посуда и тепло ждут вас.</p>
+      <div class="bento">
+        <div class="cell cell-big cell-photo rv">
+          <span class="viz-badge">Визуализация</span>
+          <img class="photo-img" src="photos/grill.jpg" alt="Мангальная зона беседки: большой мангал с вытяжкой, повар жарит мясо" loading="lazy" style="position:absolute;inset:0">
+        </div>
+        <div class="cell cell-accent rv">
+          <h3>Тепло зимой</h3>
+          <p>Закрытый тёплый контур. За окном снег, внутри плюс двадцать.</p>
+        </div>
+        <div class="cell rv">
+          <span class="num">7</span>
+          <h3>Зон освещения</h3>
+          <p>Внутри и снаружи: от яркого света к уютному полумраку.</p>
+        </div>
+        <div class="cell cell-mosaic rv">
+          <h3>Мягкая зона</h3>
+          <p>Диваны, стол, плед. Места хватит компании до 8 гостей.</p>
+        </div>
+        <div class="cell rv">
+          <h3>Музыка и кино</h3>
+          <p>Колонка и проектор для киновечера под шашлык.</p>
+        </div>
+        <div class="cell cell-wide rv">
+          <h3>Парковка у входа</h3>
+          <p>Своя парковка в трёх шагах от беседки. Заезжайте, выгружайтесь, отдыхайте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="wrap"><h2 class="rv">Зимой и летом</h2></div>
+    <div class="wrap">
+      <div class="rail rv">
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/winter-couple.jpg" alt="Пара зимним вечером на диване под пледом, свечи и чай на столе, за краем беседки заснеженный лес" loading="lazy"></div>
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/hero.jpg" alt="Беседка летом: мягкая зона у стены-мозаики, костровая чаша на лужайке" loading="lazy"></div>
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/g1.jpg" alt="Беседка целиком: тёмный каркас, деревянный настил, дорожка из камня" loading="lazy"></div>
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/g2.jpg" alt="Мозаичная стена во всю высоту беседки" loading="lazy"></div>
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/g3.jpg" alt="Потолок из тёмной доски и подвесные лампы" loading="lazy"></div>
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/g4.jpg" alt="Мягкая зона: диваны с подушками, компания гостей" loading="lazy"></div>
+        <div><span class="viz-badge">Визуализация</span><img class="photo-img" src="photos/g5.jpg" alt="Вид из беседки на лужайку с костровой чашей" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prices" id="prices">
+    <div class="wrap">
+      <h2 class="rv">Цены</h2>
+      <p class="lead rv">Стартовые цены сезона открытия. Первым гостям скидка 20%.</p>
+      <div class="price-grid">
+        <div class="price rv">
+          <h3>Будни</h3>
+          <div class="cost">1 000 ₽<small> / час</small></div>
+          <p>С понедельника по четверг, от 3 часов. Спокойный формат для встреч и посиделок.</p>
+        </div>
+        <div class="price featured rv">
+          <h3>Вечер выходного</h3>
+          <div class="cost">8 500 ₽<small> / с 17:00 до 23:00</small></div>
+          <p>Пятница, суббота и воскресенье. Шесть часов вашего вечера, всё включено.</p>
+        </div>
+        <div class="price rv">
+          <h3>Ночное продление</h3>
+          <div class="cost">1 500 ₽<small> / час после 23:00</small></div>
+          <p>Продлевайте вечер до 02:00. Добавляется к основному тарифу при бронировании.</p>
+        </div>
+      </div>
+      <p class="price-note rv">Днём в выходные, с 11:00 до 16:00, беседка стоит <b>5 500 ₽</b> за весь блок. <b>Депозит 3 000 ₽</b> возвращается после осмотра беседки в день визита. Свой алкоголь разрешён, с животными можно.</p>
+      <div class="pills rv">
+        <span class="pill">Уголь и дрова на месте</span>
+        <span class="pill">Декор к празднику</span>
+        <span class="pill">Проектор для киновечера</span>
+        <span class="pill">Шашлык из киоска рядом</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="corp">
+    <div class="wrap">
+      <div class="corp-card rv">
+        <div class="corp-photo">
+          <span class="viz-badge">Визуализация</span>
+          <img src="photos/winter-party.jpg" alt="Новогодний вечер в беседке: восемь гостей за накрытым столом под навесом, ёлка с гирляндой, снег вокруг" loading="lazy">
+        </div>
+        <div class="corp-text">
+          <h2>Новый год и корпоративы</h2>
+          <p>Небольшой команде до 8 человек не нужен банкетный зал. Нужен вечер, где все друг друга слышат, мангал работает, а за стеной снег.</p>
+          <p>Работаем по безналу от ИП, закрывающие документы отправим. Даты на декабрь разбирают заранее, поэтому бронировать лучше сейчас.</p>
+          <a class="btn btn-primary" href="#booking">Выбрать дату</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <h2 class="rv">Как это работает</h2>
+      <div class="steps">
+        <div class="step rv">
+          <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg></div>
+          <div>
+            <h3>Выбираете дату на сайте</h3>
+            <p>Календарь показывает свободные дни. Выбираете время, сразу видите итоговую сумму.</p>
+          </div>
+        </div>
+        <div class="step rv">
+          <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <h3>Менеджер перезвонит</h3>
+            <p>Свяжемся в течение 15 минут в рабочее время, подтвердим дату и ответим на вопросы.</p>
+          </div>
+        </div>
+        <div class="step rv">
+          <div class="step-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
+          <div>
+            <h3>Приезжаете и отдыхаете</h3>
+            <p>Беседка прогрета, мангал и посуда готовы, свет включён. Уборку после визита берём на себя.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="wrap">
+      <h2 class="rv">Забронировать</h2>
+      <p class="lead rv">Выберите дату и время. Оплата не нужна: менеджер перезвонит и подтвердит бронь.</p>
+
+      <noscript>
+        <div class="bk-panel">
+          <p style="color:var(--muted)">Онлайн-календарь работает при включённом JavaScript. Напишите в WhatsApp или позвоните: <a href="tel:+79000000000" style="color:var(--accent)">+7 900 000-00-00</a></p>
+        </div>
+      </noscript>
+
+      <div class="bk" id="bkRoot" hidden>
+        <div class="bk-panel">
+
+          <div class="bk-step" id="bkStepDate">
+            <h3><i>1</i>Выберите дату</h3>
+            <div class="bk-skeleton" id="bkLoading"></div>
+            <div id="bkCal" hidden>
+              <div class="bk-cal-head">
+                <button class="bk-nav" type="button" id="bkPrev" aria-label="Предыдущий месяц">&lsaquo;</button>
+                <span class="bk-month" id="bkMonth"></span>
+                <button class="bk-nav" type="button" id="bkNext" aria-label="Следующий месяц">&rsaquo;</button>
+              </div>
+              <div class="bk-dow"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+              <div class="bk-days" id="bkDays"></div>
+              <div class="bk-legend">
+                <span><em class="free"></em>Свободно</span>
+                <span><em class="taken"></em>Занято</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bk-step" id="bkStepTime" hidden>
+            <h3><i>2</i>Выберите время</h3>
+            <div class="bk-opts" id="bkTariffs"></div>
+            <div class="bk-row" id="bkExtra"></div>
+          </div>
+
+          <div class="bk-step" id="bkStepForm" hidden>
+            <h3><i>3</i>Ваши контакты</h3>
+            <form id="bkForm" novalidate>
+              <div class="bk-row">
+                <div class="bk-field">
+                  <label for="bkName">Как вас зовут</label>
+                  <input id="bkName" name="name" type="text" autocomplete="name" placeholder="Максим" required>
+                  <span class="err">Напишите имя</span>
+                </div>
+                <div class="bk-field">
+                  <label for="bkPhone">Телефон для связи</label>
+                  <input id="bkPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+                  <span class="err">Проверьте номер телефона</span>
+                </div>
+                <div class="bk-field">
+                  <label for="bkGuests">Сколько гостей</label>
+                  <select id="bkGuests" name="guests">
+                    <option value="2">2 человека</option>
+                    <option value="4" selected>3 или 4</option>
+                    <option value="6">5 или 6</option>
+                    <option value="8">7 или 8</option>
+                  </select>
+                </div>
+                <div class="bk-field">
+                  <label for="bkOccasion">Повод, если есть</label>
+                  <select id="bkOccasion" name="occasion">
+                    <option value="">Просто посидеть</option>
+                    <option value="День рождения">День рождения</option>
+                    <option value="Свидание">Свидание</option>
+                    <option value="Встреча с друзьями">Встреча с друзьями</option>
+                    <option value="Корпоратив">Корпоратив</option>
+                  </select>
+                </div>
+                <div class="bk-field bk-wide">
+                  <label for="bkComment">Пожелания к встрече</label>
+                  <textarea id="bkComment" name="comment" placeholder="Нужен декор, проектор, детский стульчик"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="bk-msg" id="bkMsg" role="alert"></div>
+
+          <div class="bk-done" id="bkDone">
+            <div class="tick"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Заявка принята</h3>
+            <p id="bkDoneDetails"></p>
+            <p><b>Менеджер наберёт вас</b> в течение 15 минут в рабочее время, чтобы подтвердить дату и уточнить детали.</p>
+            <span class="code" id="bkDoneCode"></span>
+          </div>
+
+        </div>
+
+        <aside class="bk-summary" id="bkSummary">
+          <h3>Ваша бронь</h3>
+          <dl class="bk-lines" id="bkLines" aria-live="polite">
+            <div><dt>Дата</dt><dd id="sumDate">не выбрана</dd></div>
+            <div><dt>Время</dt><dd id="sumTime">не выбрано</dd></div>
+            <div><dt>Тариф</dt><dd id="sumTariff">не выбран</dd></div>
+          </dl>
+          <div class="bk-total"><span>Итого</span><b id="sumTotal">0 ₽</b></div>
+          <p class="bk-hint">Плюс возвратный депозит 3 000 ₽ на месте. Онлайн-оплата не требуется.</p>
+          <button class="btn btn-primary btn-block" type="button" id="bkSubmit" disabled>Забронировать</button>
+          <p class="bk-alt">Удобнее в мессенджере? <a href="https://wa.me/79000000000?text=Здравствуйте!%20Хочу%20забронировать%20беседку" target="_blank" rel="noopener">Написать в WhatsApp</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="loc">
+    <div class="wrap">
+      <div class="rv">
+        <h2>Рядом с домом, далеко от суеты</h2>
+        <p><b>Нижний Новгород, Анкудиновка.</b> Точный адрес и схему проезда пришлём при подтверждении брони.</p>
+        <p>Своя парковка у входа. По соседству киоск с шашлыком и шаурмой: можно ничего не готовить, а просто заказать мясо туда.</p>
+        <a class="btn btn-ghost" href="https://yandex.ru/maps/47/nizhny-novgorod/" target="_blank" rel="noopener">Открыть карту</a>
+      </div>
+      <div class="loc-map rv"><div class="ph" data-label="Карта: точка появится после монтажа"></div></div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <h2 class="rv">Вопросы, которые нам задают</h2>
+      <div class="rv">
+        <details>
+          <summary>Нужна ли предоплата при бронировании?</summary>
+          <p>Нет. Заявка на сайте ничего не списывает: вы выбираете дату, менеджер звонит и подтверждает. Оплата на месте, там же возвратный депозит 3 000 ₽.</p>
+        </details>
+        <details>
+          <summary>Можно со своим алкоголем и едой?</summary>
+          <p>Да. Привозите всё своё: продукты, напитки, маринованное мясо. Уголь, дрова и розжиг есть на месте.</p>
+        </details>
+        <details>
+          <summary>Зимой правда тепло?</summary>
+          <p>Да, у беседки закрытый тёплый контур и отопление. К вашему приезду мы прогреваем её заранее.</p>
+        </details>
+        <details>
+          <summary>До скольки можно отдыхать?</summary>
+          <p>Стандартно до 23:00, с ночным продлением до 02:00. Просим уважать тишину после полуночи.</p>
+        </details>
+        <details>
+          <summary>А если планы поменяются?</summary>
+          <p>Позвоните или напишите, перенесём дату без потерь. Просто предупредите хотя бы за сутки.</p>
+        </details>
+        <details>
+          <summary>Можно с собакой или кошкой?</summary>
+          <p>Да, с животными можно. Просим следить за питомцем: мебель и отделка из натурального дерева.</p>
+        </details>
+        <details>
+          <summary>Сколько человек помещается?</summary>
+          <p>Комфортно до 8 гостей: мягкая зона, стол и мангальная зона рассчитаны именно на такую компанию.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap rv">
+      <h2>Забронируйте свой вечер</h2>
+      <p>Открываемся в ноябре. Первым 30 броням скидка 20%.</p>
+      <a class="btn btn-primary" href="#booking">Выбрать дату</a>
+      <div class="final-strip" aria-hidden="true"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Тёплое место, Нижний Новгород</span>
+    <a href="tel:+79000000000">+7 900 000-00-00</a>
+    <span>ИП. Реквизиты пришлём по запросу</span>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="#booking">Забронировать</a>
+  <a class="btn btn-ghost" href="tel:+79000000000" aria-label="Позвонить"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+</div>
+
+<script>
+/* ---------- появление секций при скролле ---------- */
+(function(){
+  document.documentElement.classList.add("js");
+  var all=document.querySelectorAll(".rv");
+  function showAll(){all.forEach(function(el){el.classList.add("on")})}
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)){showAll();return}
+  var fired=false;
+  var io=new IntersectionObserver(function(entries){
+    fired=true;
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}});
+  },{threshold:.15,rootMargin:"0px 0px -40px 0px"});
+  all.forEach(function(el){io.observe(el)});
+  setTimeout(function(){if(!fired){io.disconnect();showAll()}},2500);
+})();
+
+/* ---------- бронирование ---------- */
+(function(){
+  var API = (window.BESEDKA_API || "").trim();
+  /* «/api» — это локальный сервер разработки. На реальном хостинге такого
+     адреса нет, поэтому там он не считается настройкой: гость увидит
+     WhatsApp вместо формы, которая всё равно не отправится. */
+  var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  var CONFIGURED = /^https?:\/\//.test(API) || (API === "/api" && isLocal);
+
+  var PRICE = {
+    weekdayHour:1000, minHours:3, maxHours:6, startFrom:12, startTo:20,
+    dayPack:5500, eveningPack:8500, nightHour:1500, maxNight:3, deposit:3000
+  };
+  var MONTHS = ["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
+  var MONTHS_OF = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+
+  var root = document.getElementById("bkRoot");
+  if(!root) return;
+
+  /* Ссылка на бронирование не прописана в config.js: не показываем
+     форму, которая всё равно не отправится, а ведём гостя в WhatsApp. */
+  if(!CONFIGURED){
+    var box = document.createElement("div");
+    box.className = "bk-panel";
+    box.innerHTML = '<p style="color:var(--muted);max-width:46ch">Онлайн-запись подключается. '
+      + 'Напишите нам в WhatsApp или позвоните, забронируем дату вручную.</p>'
+      + '<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">'
+      + '<a class="btn btn-primary" href="https://wa.me/79000000000?text=Здравствуйте!%20Хочу%20забронировать%20беседку" target="_blank" rel="noopener">Написать в WhatsApp</a>'
+      + '<a class="btn btn-ghost" href="tel:+79000000000">Позвонить</a></div>';
+    root.parentNode.insertBefore(box, root);
+    return;
+  }
+  root.hidden = false;
+
+  var el = {
+    loading:document.getElementById("bkLoading"), cal:document.getElementById("bkCal"),
+    month:document.getElementById("bkMonth"), days:document.getElementById("bkDays"),
+    prev:document.getElementById("bkPrev"), next:document.getElementById("bkNext"),
+    stepTime:document.getElementById("bkStepTime"), tariffs:document.getElementById("bkTariffs"),
+    extra:document.getElementById("bkExtra"), stepForm:document.getElementById("bkStepForm"),
+    form:document.getElementById("bkForm"), msg:document.getElementById("bkMsg"),
+    done:document.getElementById("bkDone"), doneCode:document.getElementById("bkDoneCode"),
+    doneDetails:document.getElementById("bkDoneDetails"), summary:document.getElementById("bkSummary"),
+    sumDate:document.getElementById("sumDate"), sumTime:document.getElementById("sumTime"),
+    sumTariff:document.getElementById("sumTariff"), sumTotal:document.getElementById("sumTotal"),
+    submit:document.getElementById("bkSubmit"), stepDate:document.getElementById("bkStepDate")
+  };
+
+  var today = new Date(); today.setHours(0,0,0,0);
+  var view = new Date(today.getFullYear(), today.getMonth(), 1);
+  var limit = new Date(today.getFullYear(), today.getMonth()+6, 1);
+  var state = {date:null, tariff:null, start:12, hours:PRICE.minHours, night:0, busy:{}, blocked:{}};
+
+  function ymd(d){
+    var m = d.getMonth()+1, day = d.getDate();
+    return d.getFullYear()+"-"+(m<10?"0":"")+m+"-"+(day<10?"0":"")+day;
+  }
+  function money(n){ return n.toLocaleString("ru-RU")+" ₽"; }
+  function hhmm(h){ h=((h%24)+24)%24; return (h<10?"0":"")+h+":00"; }
+  function isWeekend(d){ var w=d.getDay(); return w===5||w===6||w===0; }
+  function nightCount(start,hours){
+    var n=0;
+    for(var i=0;i<hours;i++){ var h=((start+i)%24); if(h>=23||h<2) n++; }
+    return n;
+  }
+
+  /* ----- цена ----- */
+  function calc(){
+    if(!state.date||!state.tariff) return 0;
+    if(state.tariff==="weekday"){
+      var nights = nightCount(state.start, state.hours);
+      return (state.hours-nights)*PRICE.weekdayHour + nights*PRICE.nightHour;
+    }
+    if(state.tariff==="day") return PRICE.dayPack;
+    return PRICE.eveningPack + state.night*PRICE.nightHour;
+  }
+  function timeRange(){
+    if(!state.tariff) return null;
+    if(state.tariff==="weekday") return [hhmm(state.start), hhmm(state.start+state.hours), state.hours];
+    if(state.tariff==="day") return ["11:00","16:00",5];
+    return ["17:00", hhmm(23+state.night), 6+state.night];
+  }
+  function tariffLabel(){
+    if(state.tariff==="weekday") return "Будни, почасовая";
+    if(state.tariff==="day") return "Выходной, день";
+    if(state.tariff==="evening") return "Выходной, вечер"+(state.night?" плюс ночь":"");
+    return "";
+  }
+
+  /* ----- сводка ----- */
+  function renderSummary(){
+    if(state.date){
+      var d = state.date;
+      el.sumDate.textContent = d.getDate()+" "+MONTHS_OF[d.getMonth()];
+    } else { el.sumDate.textContent = "не выбрана"; }
+    var t = timeRange();
+    el.sumTime.textContent = t ? t[0]+" – "+t[1]+", "+t[2]+" ч" : "не выбрано";
+    el.sumTariff.textContent = state.tariff ? tariffLabel() : "не выбран";
+    el.sumTotal.textContent = money(calc());
+    el.submit.disabled = !(state.date && state.tariff);
+  }
+
+  /* ----- календарь ----- */
+  function renderCal(){
+    el.month.textContent = MONTHS[view.getMonth()]+" "+view.getFullYear();
+    el.prev.disabled = view.getFullYear()===today.getFullYear() && view.getMonth()===today.getMonth();
+    el.next.disabled = view >= limit;
+    el.days.innerHTML = "";
+
+    var first = new Date(view.getFullYear(), view.getMonth(), 1);
+    var shift = (first.getDay()+6)%7;
+    var total = new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+
+    for(var i=0;i<shift;i++){
+      var pad = document.createElement("span");
+      pad.className = "bk-day empty";
+      el.days.appendChild(pad);
+    }
+    for(var day=1;day<=total;day++){
+      var d = new Date(view.getFullYear(), view.getMonth(), day);
+      var key = ymd(d);
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "bk-day" + (isWeekend(d)?" weekend":"");
+      b.textContent = day;
+      b.setAttribute("aria-pressed", state.date && ymd(state.date)===key ? "true" : "false");
+      b.setAttribute("aria-label", day+" "+MONTHS_OF[d.getMonth()]);
+      if(d < today){ b.disabled = true; }
+      else if(state.busy[key] || state.blocked[key]){ b.className += " busy"; b.disabled = true; b.title = "Дата занята"; }
+      else { b.dataset.date = key; }
+      el.days.appendChild(b);
+    }
+  }
+
+  el.days.addEventListener("click", function(e){
+    var btn = e.target.closest(".bk-day");
+    if(!btn || !btn.dataset.date) return;
+    var p = btn.dataset.date.split("-");
+    state.date = new Date(+p[0], +p[1]-1, +p[2]);
+    state.tariff = null; state.night = 0; state.hours = PRICE.minHours; state.start = 12;
+    hideMsg();
+    renderCal(); renderTariffs(); renderSummary();
+    el.stepTime.hidden = false;
+    el.stepForm.hidden = false;
+  });
+  el.prev.addEventListener("click", function(){ view.setMonth(view.getMonth()-1); renderCal(); });
+  el.next.addEventListener("click", function(){ view.setMonth(view.getMonth()+1); renderCal(); });
+
+  /* ----- шаг 2: тарифы ----- */
+  function optButton(id, title, sub, pressed){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "bk-opt"; b.dataset.tariff = id;
+    b.setAttribute("aria-pressed", pressed?"true":"false");
+    b.innerHTML = "<b>"+title+"</b><small>"+sub+"</small>";
+    return b;
+  }
+  function renderTariffs(){
+    el.tariffs.innerHTML = ""; el.extra.innerHTML = "";
+    if(!state.date) return;
+    if(isWeekend(state.date)){
+      el.tariffs.appendChild(optButton("day","День, 11:00 – 16:00", money(PRICE.dayPack)+" за блок", state.tariff==="day"));
+      el.tariffs.appendChild(optButton("evening","Вечер, 17:00 – 23:00", money(PRICE.eveningPack)+" за блок", state.tariff==="evening"));
+    } else {
+      el.tariffs.appendChild(optButton("weekday","Почасовая аренда", money(PRICE.weekdayHour)+" в час, от "+PRICE.minHours+" часов", state.tariff==="weekday"));
+    }
+    renderExtra();
+  }
+  function selectWrap(labelText, id, options, value){
+    var wrap = document.createElement("div");
+    wrap.className = "bk-field";
+    var lab = document.createElement("label"); lab.textContent = labelText; lab.setAttribute("for", id);
+    var sel = document.createElement("select"); sel.id = id;
+    options.forEach(function(o){
+      var op = document.createElement("option");
+      op.value = o[0]; op.textContent = o[1];
+      if(String(o[0])===String(value)) op.selected = true;
+      sel.appendChild(op);
+    });
+    wrap.appendChild(lab); wrap.appendChild(sel);
+    return {wrap:wrap, sel:sel};
+  }
+  function renderExtra(){
+    el.extra.innerHTML = "";
+    if(!state.tariff) return;
+
+    if(state.tariff==="weekday"){
+      var starts = [];
+      for(var h=PRICE.startFrom;h<=PRICE.startTo;h++) starts.push([h, hhmm(h)]);
+      var s = selectWrap("Начало", "bkStart", starts, state.start);
+      s.sel.addEventListener("change", function(){ state.start = +this.value; renderSummary(); });
+      el.extra.appendChild(s.wrap);
+
+      var durs = [];
+      for(var n=PRICE.minHours;n<=PRICE.maxHours;n++) durs.push([n, n+" ч"]);
+      var dsel = selectWrap("Сколько часов", "bkHours", durs, state.hours);
+      dsel.sel.addEventListener("change", function(){ state.hours = +this.value; renderSummary(); });
+      el.extra.appendChild(dsel.wrap);
+    }
+
+    if(state.tariff==="evening"){
+      var nights = [[0,"Не нужно"]];
+      for(var k=1;k<=PRICE.maxNight;k++) nights.push([k, "до "+hhmm(23+k)+", плюс "+money(k*PRICE.nightHour)]);
+      var nsel = selectWrap("Продлить после 23:00", "bkNight", nights, state.night);
+      nsel.sel.addEventListener("change", function(){ state.night = +this.value; renderSummary(); });
+      el.extra.appendChild(nsel.wrap);
+    }
+  }
+  el.tariffs.addEventListener("click", function(e){
+    var btn = e.target.closest(".bk-opt");
+    if(!btn) return;
+    state.tariff = btn.dataset.tariff;
+    state.night = 0;
+    [].forEach.call(el.tariffs.children, function(c){ c.setAttribute("aria-pressed", c===btn ? "true":"false"); });
+    renderExtra(); renderSummary();
+  });
+
+  /* ----- телефон ----- */
+  var phone = document.getElementById("bkPhone");
+  phone.addEventListener("input", function(){
+    var digits = this.value.replace(/\D/g,"");
+    if(digits[0]==="8") digits = "7"+digits.slice(1);
+    if(digits[0]!=="7") digits = "7"+digits;
+    digits = digits.slice(0,11);
+    var out = "+7";
+    if(digits.length>1) out += " "+digits.slice(1,4);
+    if(digits.length>=5) out += " "+digits.slice(4,7);
+    if(digits.length>=8) out += "-"+digits.slice(7,9);
+    if(digits.length>=10) out += "-"+digits.slice(9,11);
+    this.value = out;
+  });
+
+  function setInvalid(input, bad){
+    input.closest(".bk-field").classList.toggle("invalid", bad);
+    return !bad;
+  }
+  function showMsg(text, isError){
+    el.msg.textContent = text;
+    el.msg.className = "bk-msg show" + (isError?" error":"");
+  }
+  function hideMsg(){ el.msg.className = "bk-msg"; }
+
+  /* Единственный источник правды при отправке: то, что видит гость.
+     Пересчитываем состояние с живых контролов, чтобы цена в сводке
+     и цена в заявке менеджеру не могли разойтись. */
+  function syncFromDom(){
+    var pressed = el.tariffs.querySelector('.bk-opt[aria-pressed="true"]');
+    state.tariff = pressed ? pressed.dataset.tariff : null;
+    var start = document.getElementById("bkStart");
+    var hours = document.getElementById("bkHours");
+    var night = document.getElementById("bkNight");
+    if(state.tariff === "weekday"){
+      if(start) state.start = +start.value;
+      if(hours) state.hours = +hours.value;
+      state.night = 0;
+    } else {
+      state.night = (state.tariff === "evening" && night) ? +night.value : 0;
+    }
+    renderSummary();
+  }
+
+  /* ----- отправка ----- */
+  el.submit.addEventListener("click", function(){
+    syncFromDom();
+    if(!state.date || !state.tariff){ showMsg("Сначала выберите дату и время.", true); return; }
+
+    var name = document.getElementById("bkName");
+    var okName = setInvalid(name, name.value.trim().length < 2);
+    var digits = phone.value.replace(/\D/g,"");
+    var okPhone = setInvalid(phone, digits.length !== 11);
+    if(!okName || !okPhone){
+      showMsg("Проверьте имя и телефон, чтобы мы смогли перезвонить.", true);
+      (okName ? phone : name).focus();
+      return;
+    }
+    hideMsg();
+
+    var t = timeRange();
+    var occasion = document.getElementById("bkOccasion").value;
+    var comment = document.getElementById("bkComment").value.trim();
+    var payload = {
+      action:"book", date:ymd(state.date), tariff:state.tariff, tariffLabel:tariffLabel(),
+      timeFrom:t[0], timeTo:t[1], hours:t[2],
+      guests:+document.getElementById("bkGuests").value, price:calc(),
+      name:name.value.trim(), phone:phone.value.trim(),
+      comment:(occasion ? occasion+(comment?". ":"") : "")+comment
+    };
+
+    el.submit.disabled = true;
+    el.submit.textContent = "Отправляем";
+
+    fetch(API, {method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify(payload)})
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if(res && res.ok) return success(res.id, payload);
+        if(res && res.error === "date_taken"){
+          showMsg("Эту дату только что забронировали. Выберите другую, пожалуйста.", true);
+          return load();
+        }
+        throw new Error((res && res.error) || "unknown");
+      })
+      .catch(function(){
+        showMsg("Не получилось отправить заявку. Напишите в WhatsApp или позвоните, мы забронируем вручную.", true);
+      })
+      .finally(function(){
+        el.submit.textContent = "Забронировать";
+        el.submit.disabled = !(state.date && state.tariff);
+      });
+  });
+
+  function success(id, payload){
+    el.stepDate.hidden = true; el.stepTime.hidden = true; el.stepForm.hidden = true;
+    el.summary.hidden = true; hideMsg();
+    var d = state.date;
+    el.doneDetails.textContent = d.getDate()+" "+MONTHS_OF[d.getMonth()]+", "
+      + payload.timeFrom+" – "+payload.timeTo+", "+money(payload.price)+".";
+    el.doneCode.textContent = "Номер заявки "+id;
+    el.done.className = "bk-done show";
+    el.done.setAttribute("tabindex","-1");
+    el.done.focus({preventScroll:true});
+    el.done.scrollIntoView({block:"center", behavior:"smooth"});
+  }
+
+  /* ----- загрузка занятых дат ----- */
+  function load(){
+    return fetch(API+"?action=availability", {cache:"no-store"})
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        state.busy = {}; state.blocked = {};
+        (res.busy||[]).forEach(function(d){ state.busy[d] = true; });
+        (res.blocked||[]).forEach(function(d){ state.blocked[d] = true; });
+      })
+      .catch(function(){ /* календарь останется полностью свободным */ })
+      .then(function(){
+        el.loading.hidden = true; el.cal.hidden = false;
+        renderCal(); renderSummary();
+      });
+  }
+
+  load();
+})();
+</script>
+
+</body>
+</html>
